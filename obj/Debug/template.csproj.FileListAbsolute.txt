@@ -41,3 +41,12 @@ D:\Users\Stijn\Documents\School\Graphics\RayTracer-f7d110b77b97895820c7634a19484
 D:\Users\Stijn\Documents\School\Graphics\RayTracer-f7d110b77b97895820c7634a194843ce94d78522\RayTracer-f7d110b77b97895820c7634a194843ce94d78522\obj\Debug\template.csprojResolveAssemblyReference.cache
 D:\Users\Stijn\Documents\School\Graphics\RayTracer-f7d110b77b97895820c7634a194843ce94d78522\RayTracer-f7d110b77b97895820c7634a194843ce94d78522\obj\Debug\template.exe
 D:\Users\Stijn\Documents\School\Graphics\RayTracer-f7d110b77b97895820c7634a194843ce94d78522\RayTracer-f7d110b77b97895820c7634a194843ce94d78522\obj\Debug\template.pdb
+D:\Users\Stijn\Documents\School\Graphics\RayTracer_V2\bin\Debug\Content\earth.bmp
+D:\Users\Stijn\Documents\School\Graphics\RayTracer_V2\bin\Debug\template.exe.config
+D:\Users\Stijn\Documents\School\Graphics\RayTracer_V2\bin\Debug\template.exe
+D:\Users\Stijn\Documents\School\Graphics\RayTracer_V2\bin\Debug\template.pdb
+D:\Users\Stijn\Documents\School\Graphics\RayTracer_V2\bin\Debug\OpenTK.dll
+D:\Users\Stijn\Documents\School\Graphics\RayTracer_V2\bin\Debug\OpenTK.dll.config
+D:\Users\Stijn\Documents\School\Graphics\RayTracer_V2\obj\Debug\template.csprojResolveAssemblyReference.cache
+D:\Users\Stijn\Documents\School\Graphics\RayTracer_V2\obj\Debug\template.exe
+D:\Users\Stijn\Documents\School\Graphics\RayTracer_V2\obj\Debug\template.pdb

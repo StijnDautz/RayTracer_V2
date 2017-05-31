@@ -16,16 +16,18 @@ namespace template {
 	    {
             rnd = new Random();
 
-            Material mirror = new Material(new Vector3(1, 1, 1), false, false);
-            Material wall = new Material(new Vector3(1, 0.2f, 0.3f), false, false);
+            Material mirror = new Material(new Vector3(1, 1, 1), 1, false);
+            Material wall = new Material(new Vector3(1, 1f, 1f), 0, false);
+            Material red = new Material(new Vector3(1, 0.8f, 0.9f), 0.2f, false);
+            Material textured = new Material(Vector3.Zero, 0, true);
 
             Scene scene = new Scene();
-            scene.AddPrimitive(new Sphere(new Vector3(0, 1, 0.5f), 1, new Vector3(1.0f, 0.5f, 0.5f), mirror));      
+            scene.AddPrimitive(new Sphere(new Vector3(0, 1, 0.5f), 1, new Vector3(1.0f, 0.5f, 0.5f), red));      
             //scene.AddPrimitive(new Sphere(new Vector3(4, 0, 2), 1, new Vector3(0.5f, 1.0f, 0.5f), mirror));
             //scene.AddPrimitive(new Sphere(new Vector3(-1, 0, 1), 1, new Vector3(0.5f, 0.5f, 1.0f), mirror));
-            scene.AddPrimitive(new Plane(new Vector3(0, -1, 0), new Vector3(0, 1, 0), new Vector3(1f, 1f, 1f), wall));
+            scene.AddPrimitive(new Plane(new Vector3(0, -0.9f, 0), new Vector3(0, 1, 0), new Vector3(1f, 1f, 1f), mirror));
             scene.AddPrimitive(new Plane(new Vector3(0, 5, 0), new Vector3(0, -1, 0), new Vector3(1f, 1f, 1f), wall));
-            scene.AddPrimitive(new Plane(new Vector3(-4, 0, 0), new Vector3(1, 0, 0), new Vector3(1f, 1f, 1f), wall));
+            scene.AddPrimitive(new Plane(new Vector3(-4, 0, 0), new Vector3(1, 0, 0), new Vector3(1f, 1f, 1f), textured));
             scene.AddPrimitive(new Plane(new Vector3(6, 0, 0), new Vector3(-1, 0, 0), new Vector3(1f, 1f, 1f), wall));
             scene.AddPrimitive(new Plane(new Vector3(0, 0, 5f), new Vector3(0, 0, -1), new Vector3(2f, 2f, 2f), wall));
             //scene.AddLight(new Light(new Vector3(0, 0, 0), new Vector3(1f, 1f, 1f), new Vector3(3f,3f,3f)));
