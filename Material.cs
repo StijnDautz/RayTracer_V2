@@ -1,4 +1,5 @@
 ﻿using OpenTK;
+using System;
 
 namespace template
 {
@@ -28,10 +29,7 @@ namespace template
         public Vector3 ComputeColor(Vector3 alpha, Vector3 intersection)
         {
             if(_textured)
-            {
-                int c = (int)intersection.X % 2;
-                return new Vector3(c, c, c) * alpha;
-            }
+            { return (((int)(Math.Floor(intersection.X) + Math.Floor(intersection.Y) + Math.Floor(intersection.Z)) & 1) == 0) ? Vector3.Zero : new Vector3(1, 1, 1); }
             else
             { return _color * alpha; }
         }

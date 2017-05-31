@@ -151,7 +151,8 @@ namespace template
             for (double i = 0; i < boundary; i += 0.001)
             {
                 pixel = screen.ConvertToScreenCoords(new Vector3(center.X + radius * (float)Math.Cos(i), 0, center.Z + radius * (float)Math.Sin(i)));
-                pixels[pixel.X + 512 + pixel.Y * width] = VectorMath.GetColorInt(color);
+                if(pixel.X > 0 && pixel.X < 512 && pixel.Y > 0 && pixel.Y < 512)
+                { pixels[pixel.X + 512 + pixel.Y * width] = VectorMath.GetColorInt(color); }
             }
         }
 

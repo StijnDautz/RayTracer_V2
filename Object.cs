@@ -9,6 +9,7 @@ namespace template
         public Vector3 Position
         {
             get { return _position; }
+            set { _position = value; }
         }
 
         public Object(Vector3 position)

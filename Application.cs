@@ -1,7 +1,0 @@
-﻿namespace template
-{
-    class Application
-    {
-        
-    }
-}

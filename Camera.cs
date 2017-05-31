@@ -1,32 +1,23 @@
 ﻿using OpenTK;
+using OpenTK.Graphics.ES10;
+using System;
 
 namespace template
 {
     class Camera
     {
-        private Vector3 _position;
-        private Vector3 _direction;
+        private Vector3 _position, _direction;
         private float _offset;
         private Screen _screen;
 
         public Vector3 Position
         {
             get { return _position; }
-            set
-            {
-                _position = value;
-                //TODO change _screen corners
-            }
         }
 
         public Vector3 Direction
         {
             get { return _direction; }
-            set
-            {
-                _direction = value;
-                //TODO change _screen corners
-            }
         }
 
         public float Offset
@@ -45,6 +36,19 @@ namespace template
             _position = position;
             _direction = direction;
             _screen = screen;
+            _offset = (_screen.Position - _position).Length;
+        }
+
+        public void Move(Vector3 direction)
+        {
+            _position += direction;
+            _screen.Move(direction);
+        }
+
+        public void LookAt(Vector3 target)
+        {
+            _direction = target;
+            _screen.Rotate(target, _offset);
         }
     }
 }

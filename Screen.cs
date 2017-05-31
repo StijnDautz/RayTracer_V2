@@ -37,7 +37,6 @@ namespace template
         {
             get { return corners[1]; }
             set { corners[1] = value; }
-
         }
 
         private Vector3 BottomLeft
@@ -61,6 +60,24 @@ namespace template
             TopRight = new Vector3(position.X + dimensions.X / 2, position.Y + dimensions.Y / 2, position.Z);
             BottomLeft = new Vector3(position.X - dimensions.X / 2, position.Y - dimensions.Y / 2, position.Z);
             BottomRight = new Vector3(position.X + dimensions.X / 2, position.Y - dimensions.Y / 2, position.Z);
+        }
+
+        public void Move(Vector3 direction)
+        {
+            Position += direction;
+            TopLeft += direction;
+            TopRight += direction;
+            BottomLeft += direction;
+            BottomRight += direction;
+        }
+
+        public void Rotate(Vector3 direction, float offset)
+        {
+            TopLeft = (direction - Position) + (TopLeft - Position);
+            TopRight = (direction - Position) + (TopRight - Position);
+            BottomLeft = (direction - Position) + (BottomLeft - Position);
+            BottomRight = (direction - Position) + (BottomRight - Position);
+
         }
 
         public Vector3 ConvertToWorldCoords(Vector2 p)
